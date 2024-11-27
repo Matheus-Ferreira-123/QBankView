@@ -1,10 +1,47 @@
 <div class="clients-container">
-    <h2>Clientes</h2>
-    <ul>
-      <li *ngFor="let client of clients">
-        {{ client.name }} - {{ client.email }}
-        <button (click)="updateClient(client)">Editar</button>
-        <button (click)="deleteClient(client.id)">Excluir</button>
-      </li>
-    </ul>
-  </div>
+  <body>
+    <header>
+      <h1>Lista de Clientes</h1>
+    </header>
+  
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Cliente 1 -->
+          <tr>
+            <td>1</td>
+            <td>João Silva</td>
+            <td>joao.silvaexample.com</td>
+            <td>(11) 91234-5678</td>
+            <td>
+              <a href="#" class="button button-edit">Editar</a>
+              <a href="#" class="button button-danger">Excluir</a>
+            </td>
+          </tr>
+          <!-- Cliente 2 -->
+          <tr>
+            <td>2</td>
+            <td>Maria Oliveira</td>
+            <td>maria.oliveiraexample.com</td>
+            <td>(21) 99876-5432</td>
+            <td>
+              <a href="#" class="button button-edit">Editar</a>
+              <a href="#" class="button button-danger">Excluir</a>
+            </td>
+          </tr>
+          <!-- Mais clientes podem ser adicionados dinamicamente -->
+        </tbody>
+      </table>
+      <a href="#" class="button">Adicionar Novo Cliente</a>
+    </div>
+  </body>
+  

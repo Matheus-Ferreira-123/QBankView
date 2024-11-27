@@ -6,12 +6,13 @@ import { HomeComponent } from './app/pages/home/home.component';
 import { LoginComponent } from './app/pages/login/login.component';
 import { ClientsComponent } from './app/pages/clients/clients.component';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 bootstrapApplication(AppComponent, {
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
     provideRouter([
-      { path: '', component: HomeComponent },
+      { path: 'home', component: HomeComponent },
       { path: 'login', component: LoginComponent },
       { path: 'clients', component: ClientsComponent }
     ]),

@@ -1,12 +1,22 @@
-<div class="login-container">
-    <h2>Login</h2>
-    <form (ngSubmit)="onLogin()">
-      <label for="user">User</label>
-      <input id="user" type="text" [(ngModel)]="user" name="user" required />
-  
-      <label for="password">Password</label>
-      <input id="password" type="password" [(ngModel)]="password" name="password" required />
-  
-      <button type="submit">Login</button>
+<body>
+  <header>
+    <h1>Login - QBank</h1>
+  </header>
+  <div class="container">
+    <form class="login-form">
+      <h2>Entrar na sua conta</h2>
+      <div class="input-group">
+        <label for="user">Usuário</label>
+        <input type="text" id="user" name="user" placeholder="Digite seu nome de usuário" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+      </div>
+      <button type="submit" class="button">Entrar</button>
+      <div class="signup-link">
+        <p>Não tem uma conta? <a href="/register">Registre-se aqui</a></p>
+      </div>
     </form>
   </div>
+</body>
